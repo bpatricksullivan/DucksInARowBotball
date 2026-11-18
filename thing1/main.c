@@ -53,26 +53,49 @@ int main()
 {
     enable_servos();
     
-    set_servo_position(bserv, 1800);
-    set_servo_position(cserv, 1000);
+    set_servo_position(bserv, 1500);
+    set_servo_position(cserv, 1100);
     
-    lturn(500, 240);
-    fwd(800, 1900);
+    fwd(1000, 2400);
+    rturn(1000, 750);
+    set_servo_position(bserv, 2047);
+    fwd(1000, 4800);
+    bwd(1000, 800);
+    rturn(1000, 750);
+    lturn(1000, 350);
+    set_servo_position(bserv, 1000);
+    fwd(1000, 1000);
+    rturn(1000, 2200);
+    set_servo_position(bserv, 2047);
+    bwd(500, 600);
+    fwd(1000, 500);
+    rturn(1000, 20);
+    fwd(2000, 4000);
+    set_servo_position(cserv, 1700);
+    rturn(1000, 400);
+    set_servo_position(bserv, 1500);
     
-    set_servo_position(cserv, 1300);
-    
-    msleep(750);
-    
-    bwd(800, 1500);
-    lturn(750, 1800);
-    set_servo_position(bserv, 2000);
-    fwd(500, 400);
-    msleep(200);
-    set_servo_position(cserv, 700);
-    
-    msleep(1500);
-    
-    disable_servos();
+    /*rturn(1000, 1100); //1100 is 90 deg. approx
+    fwd(2000, 4600);
+    lturn(1000, 1100);
+    bwd(200, 250);
+    set_servo_position(bserv, 2047);
+    msleep(150);
+    fwd(1500, 2800);
+    bwd(1500, 100);
+    set_servo_position(bserv, 1500);
+    lturn(1000, 1100);
+    msleep(150);
+    set_servo_position(bserv, 2047);
+    msleep(150);
+    lturn(1000, 1100);
+    rturn(1000, 1100);
+    bwd(200, 250);
+    fwd(2000, 7500);
+    lturn(1000, 300);
+    fwd(1000, 500);
+    rturn(1000, 300);
+    set_servo_position(cserv, 1400);*/
     
     return 0;
 }
